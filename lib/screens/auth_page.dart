@@ -1,3 +1,4 @@
+import 'package:doctorapp/components/login_form.dart';
 import 'package:doctorapp/utils/text.dart';
 import 'package:flutter/material.dart';
 import 'package:doctorapp/utils/config.dart';
@@ -30,6 +31,8 @@ class _AuthPageState extends State<AuthPage> {
                     const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
               ),
               Config.spaceSmall,
+              LoginForm(),
+              Config.spaceSmall
             ],
           ))),
     );
