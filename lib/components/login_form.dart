@@ -43,7 +43,11 @@ class _LoginFormState extends State<LoginForm> {
             prefixIcon: Icon(Icons.lock_outline),
             prefixIconColor: Config.primaryColor,
             // suffixIcon: IconButton(
-            //     onPressed: () {},
+            //     onPressed: () {
+            //       setState(() {
+            //         obscurePass = !obscurePass;
+            //       });
+            //     },
             //     icon: true
             //         ? Icon(
             //             Icons.visibility_off_outlined,
