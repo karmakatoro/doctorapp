@@ -1,5 +1,6 @@
 import 'package:doctorapp/screens/auth_page.dart';
 import 'package:doctorapp/utils/config.dart';
+import 'package:doctorapp/utils/main_layout.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,67 +32,20 @@ class MyApp extends StatelessWidget {
           ),
           scaffoldBackgroundColor: Colors.white,
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              backgroundColor: Config.primaryColor,
-              selectedItemColor: Colors.white,
-              showSelectedLabels: true,
-              unselectedItemColor: Colors.grey.shade700,
-              elevation: 10,
-              type: BottomNavigationBarType.fixed,)),
-              initialRoute: '/',
-              routes: {
-                // this is initial route
-                // which is auth page (login and signup)
-                '/': (context) => const AuthPage(),
-                // this is for main layout after login
-                'main': (context) =>
-              },
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+            backgroundColor: Config.primaryColor,
+            selectedItemColor: Colors.white,
+            showSelectedLabels: true,
+            unselectedItemColor: Colors.grey.shade700,
+            elevation: 10,
+            type: BottomNavigationBarType.fixed,
+          )),
+      initialRoute: '/',
+      routes: {
+        // this is initial route
+        // which is auth page (login and signup)
+        '/': (context) => const AuthPage(),
+        'main': (context) => const MainLayout(),
+      },
     );
   }
 }
