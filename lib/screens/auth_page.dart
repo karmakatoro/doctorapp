@@ -28,7 +28,8 @@ class _AuthPageState extends State<AuthPage> {
                 AppText.enText['welcome_text']!,
                 style:
                     const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
-              )
+              ),
+              Config.spaceSmall,
             ],
           ))),
     );
