@@ -1,5 +1,6 @@
 import 'package:doctorapp/utils/config.dart';
 import 'package:flutter/material.dart';
+import 'package:doctorapp/components/button.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -59,6 +60,12 @@ class _LoginFormState extends State<LoginForm> {
             //           ))
           ),
         ),
+        Config.spaceSmall,
+        Button(
+            width: double.infinity,
+            title: 'Sign In',
+            onPressed: () {},
+            disable: false)
       ],
     ));
   }
