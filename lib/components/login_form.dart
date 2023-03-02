@@ -37,22 +37,23 @@ class _LoginFormState extends State<LoginForm> {
           cursorColor: Config.primaryColor,
           obscureText: obscurePass,
           decoration: const InputDecoration(
-              hintText: 'Your Password',
-              labelText: "Password",
-              alignLabelWithHint: true,
-              prefixIcon: const Icon(Icons.lock_outline),
-              prefixIconColor: Config.primaryColor,
-              suffixIcon: IconButton(
-                  onPressed: () {},
-                  icon: obscurePass
-                      ? const Icon(
-                          Icons.visibility_off_outlined,
-                          color: Colors.black,
-                        )
-                      : const Icon(
-                          Icons.visibility_outlined,
-                          color: Config.primaryColor,
-                        ))),
+            hintText: 'Your Password',
+            labelText: "Password",
+            alignLabelWithHint: true,
+            prefixIcon: Icon(Icons.lock_outline),
+            prefixIconColor: Config.primaryColor,
+            // suffixIcon: IconButton(
+            //     onPressed: () {},
+            //     icon: true
+            //         ? Icon(
+            //             Icons.visibility_off_outlined,
+            //             color: Colors.black,
+            //           )
+            //         : Icon(
+            //             Icons.visibility_outlined,
+            //             color: Config.primaryColor,
+            //           ))
+          ),
         ),
       ],
     ));

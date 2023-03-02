@@ -31,8 +31,20 @@ class _AuthPageState extends State<AuthPage> {
                     const TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
               ),
               Config.spaceSmall,
-              LoginForm(),
-              Config.spaceSmall
+              const LoginForm(),
+              Config.spaceSmall,
+              Center(
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    AppText.enText['forgot-password']!,
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+              )
             ],
           ))),
     );
